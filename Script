@@ -1,0 +1,25 @@
+Sudo su
+Sudo apt-get update
+Sudo apt-get upgrade
+Sudo apt-get install git
+Sudo apt-get install autoconf
+Sudo apt-get install automake
+Sudo apt-get install libgtk-3-dev
+sudo apt-get install gnome-tweak-tool
+
+sudo add-apt-repository ppa:thefanclub/ubuntu-after-install
+sudo apt-get update
+sudo apt-get install ubuntu-after-install
+
+sudo su
+git clone https://github.com/LionSec/katoolin.git && cp katoolin/katoolin.py /usr/bin/katoolin
+chmod +x /usr/bin/katoolin
+sudo katoolin
+
+git clone https://github.com/horst3180/arc-theme --depth 1 && cd arc-theme
+./autogen.sh --prefix=/usr
+sudo make install
+
+git clone https://github.com/horst3180/arc-icon-theme --depth 1 && cd arc-icon-theme
+./autogen.sh --prefix=/usr
+sudo make install
